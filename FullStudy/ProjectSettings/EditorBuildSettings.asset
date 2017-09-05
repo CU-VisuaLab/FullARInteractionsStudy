@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamWiiNear.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatGazeFar.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamVoiceMed.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamGazeFar.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamGazeMed.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamGazeNear.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamVoiceFar.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamVoiceNear.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamWiiFar.unity
+  - enabled: 1
+    path: Assets/Camera/Scenes/CamWiiMed.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatGazeMed.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatGazeNear.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatVoiceFar.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatVoiceMed.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatVoiceNear.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatWiiFar.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatWiiMed.unity
+  - enabled: 1
+    path: Assets/Thermostat/Scenes/ThermostatWiiNear.unity

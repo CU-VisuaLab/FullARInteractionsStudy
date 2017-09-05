@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: cbf71a34f577a0647bded60e396695e4
+timeCreated: 1488231317
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000e0000000f0000001000000011000000120000001300000014000000
+  assetHash:
+    serializedVersion: 2
+    Hash: e9f83ff7ce61e11aac3ebd396eb8036a
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.35167906, y: 0.68202484, z: -0.039593287}
+      lookAt: {x: -0.009982744, y: 0.2365678, z: 0.039600175}
+      up: {x: 0.09531233, y: 0.09871551, z: 0.9905407}
+      fov: 45
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Attach
+    100002: Attach2
+    100004: //RootNode
+    100006: Body
+    100008: CameraCoverageAttachJoined#3
+    100010: CameraCoverageJoined#3
+    100012: CamMount
+    100014: Lens
+    100016: LevelFoV#12
+    100018: Mount
+    100020: MountRotation#13
+    100022: Q17O
+    100024: Safety Shield
+    100026: TheCam
+    400000: Attach
+    400002: Attach2
+    400004: //RootNode
+    400006: Body
+    400008: CameraCoverageAttachJoined#3
+    400010: CameraCoverageJoined#3
+    400012: CamMount
+    400014: Lens
+    400016: LevelFoV#12
+    400018: Mount
+    400020: MountRotation#13
+    400022: Q17O
+    400024: Safety Shield
+    400026: TheCam
+    2300000: Attach
+    2300002: Attach2
+    2300004: Body
+    2300006: Lens
+    2300008: Mount
+    2300010: Safety Shield
+    3300000: Attach
+    3300002: Attach2
+    3300004: Body
+    3300006: Lens
+    3300008: Mount
+    3300010: Safety Shield
+    4300000: Mesh Mount
+    4300002: Mesh Attach
+    4300004: Mesh Attach2
+    4300006: Mesh Body
+    4300008: Mesh Lens
+    4300010: Mesh Safety Shield
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
