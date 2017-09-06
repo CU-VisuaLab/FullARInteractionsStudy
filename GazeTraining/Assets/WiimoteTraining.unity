@@ -519,6 +519,11 @@ Prefab:
       propertyPath: targetZPlaneObject
       value: 
       objectReference: {fileID: 342410578}
+    - target: {fileID: 114381434539467318, guid: 6af0fec8621ee09449de2ba2afc071a5,
+        type: 2}
+      propertyPath: logging
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6af0fec8621ee09449de2ba2afc071a5, type: 2}
   m_IsPrefabParent: 0

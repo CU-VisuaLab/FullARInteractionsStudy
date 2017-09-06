@@ -60,7 +60,8 @@ namespace HoloToolkit.Unity.InputModule
 
         private void Awake()
         {
-            Connect("10.201.141.52", 4511);
+            Connect("10.201.140.218", 4511);
+            while (!_socket.Connected) ;
             Send("I'm Alive");
 
             gestureRecognizer = new GestureRecognizer();

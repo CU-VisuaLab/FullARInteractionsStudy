@@ -55,7 +55,18 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Maximum distance at which the gaze can collide with an object.
         /// </summary>
-        public float MaxGazeCollisionDistance = 10.0f;
+        public float MaxGazeCollisionDistance = 10.0f;        
+        /// <summary>
+                                                              /// Translate weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
+                                                              /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
+                                                              /// </summary>
+        private float translateWeightingFactor = 0.075f;
+
+        /// <summary>
+        /// Rotate Weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
+        /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
+        /// </summary>
+        private float rotateWeightingFactor = 0.8f;
 
         /// <summary>
         /// The LayerMasks, in prioritized order, that are used to determine the HitObject when raycasting.
@@ -139,10 +150,10 @@ namespace HoloToolkit.Unity.InputModule
             hitboxZPlane = targetZPlaneObject.transform.position.z;
             if (usingWiimote)
             {
-                Connect("10.201.141.52", 4510);
+                Connect("10.201.140.218", 4510);
                 Send("I'm Alive");
             }
-
+            while (!_socket.Connected);
 
             // Add default RaycastLayers as first layerPriority
             if (RaycastLayerMasks == null || RaycastLayerMasks.Length == 0)
@@ -299,13 +310,19 @@ namespace HoloToolkit.Unity.InputModule
 
                             float temp_x = float.Parse(x_str, CultureInfo.InvariantCulture);
                             float temp_y = float.Parse(y_str, CultureInfo.InvariantCulture);
-                            if (temp_x < 0.999f) ir_x = float.Parse(x_str, CultureInfo.InvariantCulture);
-                            if (temp_y < 1.332f) ir_y = float.Parse(y_str, CultureInfo.InvariantCulture);
+                            if (temp_x < 0.999f)
+                            {
+                                ir_x = translateWeightingFactor * float.Parse(x_str, CultureInfo.InvariantCulture) + (1 - translateWeightingFactor) * ir_x;
+                            }
+                            if (temp_y < 1.332f)
+                            {
+                                ir_y = translateWeightingFactor * float.Parse(y_str, CultureInfo.InvariantCulture) + (1 - translateWeightingFactor) * ir_y;
+                            }
 
                             if (!rotation_str.Contains("NaN"))
                             {
                                 // Update existing change to rotation
-                                float newRotation = float.Parse(rotation_str, CultureInfo.InvariantCulture);
+                                float newRotation = rotateWeightingFactor * float.Parse(rotation_str, CultureInfo.InvariantCulture) + (1 - rotateWeightingFactor) * oldRotation;
                                 deltaRotation = newRotation - oldRotation;
                                 oldRotation = newRotation;
                             }
