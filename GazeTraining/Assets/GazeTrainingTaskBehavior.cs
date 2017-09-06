@@ -52,11 +52,8 @@ public class GazeTrainingTaskBehavior : MonoBehaviour, IInputClickHandler, IFocu
 
     public void OnInputDown(InputEventData eventData)
     {
-<<<<<<< HEAD
         if (GazeManager.Instance.HitObject == null) return;
-=======
         if (GazeManager.Instance.HitObject.name == null) return; // BREAK
->>>>>>> d165087ac176b1d0e470bb84aa21f926c84787c4
         if (GazeManager.Instance.HitObject.name == sphere.name)
         {
             if (_isHolding)

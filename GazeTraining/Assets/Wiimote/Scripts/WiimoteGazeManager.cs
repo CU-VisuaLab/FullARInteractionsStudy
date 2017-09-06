@@ -139,11 +139,7 @@ namespace HoloToolkit.Unity.InputModule
             hitboxZPlane = targetZPlaneObject.transform.position.z;
             if (usingWiimote)
             {
-<<<<<<< HEAD
                 Connect("10.201.141.52", 4510);
-=======
-                Connect("10.202.103.227", 4510);
->>>>>>> d165087ac176b1d0e470bb84aa21f926c84787c4
                 Send("I'm Alive");
             }
 
