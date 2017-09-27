@@ -55,18 +55,13 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Maximum distance at which the gaze can collide with an object.
         /// </summary>
-        public float MaxGazeCollisionDistance = 10.0f;        
+        public float MaxGazeCollisionDistance = 10.0f;    
+            
         /// <summary>
-                                                              /// Translate weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
-                                                              /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
-                                                              /// </summary>
-        private float translateWeightingFactor = 0.075f;
-
-        /// <summary>
-        /// Rotate Weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
+        /// Translate weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
         /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
         /// </summary>
-        private float rotateWeightingFactor = 0.8f;
+        private float translateWeightingFactor = 0.225f;
 
         /// <summary>
         /// The LayerMasks, in prioritized order, that are used to determine the HitObject when raycasting.
@@ -150,7 +145,7 @@ namespace HoloToolkit.Unity.InputModule
             hitboxZPlane = targetZPlaneObject.transform.position.z;
             if (usingWiimote)
             {
-                Connect("10.201.140.218", 4510);
+                Connect("192.168.0.143", 4510);
                 Send("I'm Alive");
             }
             while (!_socket.Connected);
@@ -322,7 +317,7 @@ namespace HoloToolkit.Unity.InputModule
                             if (!rotation_str.Contains("NaN"))
                             {
                                 // Update existing change to rotation
-                                float newRotation = rotateWeightingFactor * float.Parse(rotation_str, CultureInfo.InvariantCulture) + (1 - rotateWeightingFactor) * oldRotation;
+                                float newRotation = float.Parse(rotation_str, CultureInfo.InvariantCulture);
                                 deltaRotation = newRotation - oldRotation;
                                 oldRotation = newRotation;
                             }

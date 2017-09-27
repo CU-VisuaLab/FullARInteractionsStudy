@@ -61,7 +61,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private void Awake()
         {
-            Connect("10.201.142.90", 4511);
+            Connect("192.168.0.143", 4511);
             while (!_socket.Connected) ;
             Send("I'm Alive");
 

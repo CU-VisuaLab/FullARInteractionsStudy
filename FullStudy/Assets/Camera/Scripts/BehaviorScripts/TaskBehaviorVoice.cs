@@ -204,11 +204,11 @@ namespace Cam
             float newY = viewport.gameObject.transform.position.y;
 
             if ((dragDirection == DirectionEnum.Left && newX + translateOffset.x > (viewportWidth - imageWidth) / 2) ||
-                (dragDirection == DirectionEnum.Right && newX + translateOffset.x < (imageHeight - viewportHeight) / 2) ||
+                (dragDirection == DirectionEnum.Right && newX + translateOffset.x < (imageWidth - viewportWidth) / 2) ||
                 (dragDirection == DirectionEnum.Down && newY + translateOffset.y > (viewportHeight - imageHeight) / 2) ||
                 (dragDirection == DirectionEnum.Up && newY + translateOffset.y < (imageHeight - viewportHeight) / 2))
             {
-                newX += translateOffset.x; newY = translateOffset.y;
+                newX += translateOffset.x; newY += translateOffset.y;
             }
             Vector3 newPos = new Vector3(newX, newY, viewport.gameObject.transform.position.z);
 

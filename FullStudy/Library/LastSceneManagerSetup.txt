@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Thermostat/Scenes/ThermostatWiiNear.unity
+- path: Assets/Camera/Scenes/CamVoiceNear.unity
   isLoaded: 1
   isActive: 1

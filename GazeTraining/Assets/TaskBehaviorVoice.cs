@@ -18,7 +18,7 @@ public class TaskBehaviorVoice : MonoBehaviour {
     private DirectionEnum dragDirection;
     
     private DirectionEnum rotateDirection;
-    private float rotationSpeed = 2f;
+    private float rotationSpeed = 0.75f;
 
     // Variables for selection
     public GameObject camera;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/WiimoteTraining.unity
+- path: Assets/GazeTraining.unity
   isLoaded: 1
   isActive: 1

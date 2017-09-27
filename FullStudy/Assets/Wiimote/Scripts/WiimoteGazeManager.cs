@@ -132,13 +132,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Translate weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
         /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
         /// </summary>
-        private float translateWeightingFactor = 0.3f;
-
-        /// <summary>
-        /// Rotate Weighting factor: 1.0f = full weight of new IR measurement; 0.01f = 1 percent weight of new IR measurement.
-        /// Higher factor = more jitter, less lag.  Lower factor = lower jitter, more lag.
-        /// </summary>
-        private float rotateWeightingFactor = 0.3f;
+        private float translateWeightingFactor = 0.225f;
 
         // WiimoteGazeManager augmentation for logging
         public bool logging;
@@ -151,7 +145,8 @@ namespace HoloToolkit.Unity.InputModule
             hitboxZPlane = targetZPlaneObject.transform.position.z;
             if (usingWiimote)
             {
-                Connect("10.201.142.90", 4510);
+                Connect("192.168.0.143", 4510);
+                while (!_socket.Connected) ;
                 Send("I'm Alive");
             }
             
@@ -310,7 +305,6 @@ namespace HoloToolkit.Unity.InputModule
 
                             float temp_x = float.Parse(x_str, CultureInfo.InvariantCulture);
                             float temp_y = float.Parse(y_str, CultureInfo.InvariantCulture);
-                            Debug.Log("Wiimote Data: " + temp_x + ", " + temp_y);
                             if (temp_x < 0.999f)
                             {
                                 ir_x = translateWeightingFactor * float.Parse(x_str, CultureInfo.InvariantCulture) + (1 - translateWeightingFactor) * ir_x;
@@ -322,7 +316,7 @@ namespace HoloToolkit.Unity.InputModule
                             if (!rotation_str.Contains("NaN"))
                             {
                                 // Update existing change to rotation
-                                float newRotation = rotateWeightingFactor * float.Parse(rotation_str, CultureInfo.InvariantCulture) + (1 - rotateWeightingFactor) * oldRotation;
+                                float newRotation = float.Parse(rotation_str, CultureInfo.InvariantCulture);
                                 deltaRotation = newRotation - oldRotation;
                                 oldRotation = newRotation;
                             }

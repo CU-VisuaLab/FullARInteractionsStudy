@@ -36,7 +36,21 @@ namespace Thermostat
         // Use this for initialization
         void Start()
         {
-            if (logging) Debug.Log(">Thermostat_Near_Wii");
+            if (logging)
+            {
+                if (thermostat.transform.position.z < 3.0f)
+                {
+                    Debug.Log(">Thermostat_Near_Wii");
+                }
+                else if (thermostat.transform.position.z < 4.0f)
+                {
+                    Debug.Log(">Thermostat_Med_Wii");
+                }
+                else if (thermostat.transform.position.z < 5.0f)
+                {
+                    Debug.Log(">Thermostat_Far_Wii");
+                }
+            }
 
             armRotation = -60f;
             adjustTemperature(armRotation);
@@ -208,6 +222,7 @@ namespace Thermostat
             {
                 if (WiimoteGazeManager.Instance.HitObject.name == thermostat.name)
                 {
+                    Debug.Log("Select: Selected Thermostat at " + Time.time);
                     if (!thermostatMoved)
                     {
                         temperatureReading.transform.localPosition = new Vector3(0.0f, 0.2f, 0.0f);

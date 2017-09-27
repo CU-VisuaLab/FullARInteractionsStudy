@@ -50,7 +50,21 @@ namespace Thermostat
         // Use this for initialization
         void Start()
         {
-            if (logging) Debug.Log(">Thermostat_Near_Hand");
+            if (logging)
+            {
+                if (thermostat.transform.position.z < 3.0f)
+                {
+                    Debug.Log(">Thermostat_Near_Gaze");
+                }
+                else if (thermostat.transform.position.z < 4.0f)
+                {
+                    Debug.Log(">Thermostat_Med_Gaze");
+                }
+                else if (thermostat.transform.position.z < 5.0f)
+                {
+                    Debug.Log(">Thermostat_Far_Gaze");
+                }
+            }
 
             armRotation = -60f;
             adjustTemperature(armRotation);

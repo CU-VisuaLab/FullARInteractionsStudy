@@ -1383,7 +1383,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: CamGazeNear
+            m_StringArgument: CamVoiceMed
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1698,7 +1698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.66617, y: -146.67001}
+  m_AnchoredPosition: {x: 116.6662, y: -146.67001}
   m_SizeDelta: {x: 73, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043040259

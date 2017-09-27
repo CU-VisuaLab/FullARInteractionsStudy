@@ -41,7 +41,7 @@ public class GazeTrainingTaskBehavior : MonoBehaviour, IInputClickHandler, IFocu
 
     public void OnInputClicked(InputEventData eventData)
     {
-        if (GazeManager.Instance.HitObject.name == cube.name)
+        if (GazeManager.Instance.HitObject.name == cube.name) // BREAK
         {
             colorCounter++;
             if (colorCounter % 3 == 2) cube.GetComponent<Renderer>().material = green;
