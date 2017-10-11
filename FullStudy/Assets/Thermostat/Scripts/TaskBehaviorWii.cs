@@ -236,7 +236,7 @@ namespace Thermostat
 				} 
 				else 
 				{
-					Debug.Log ("Select: Missed Target " WiimoteGazeManager.Instance.HitObject.name + " at " + Time.time);
+					Debug.Log ("Select: Missed Target " + WiimoteGazeManager.Instance.HitObject.name + " at " + Time.time);
 				}
             }
         }

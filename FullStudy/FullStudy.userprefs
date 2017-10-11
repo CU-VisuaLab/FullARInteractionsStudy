@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Camera\Scripts\BehaviorScripts\TaskBehaviorVoice.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Thermostat\Scripts\TaskBehaviorWii.cs">
     <Files>
-      <File FileName="Assets\Camera\Scripts\BehaviorScripts\TaskBehaviorVoice.cs" Line="133" Column="18" />
+      <File FileName="Assets\Camera\Scripts\BehaviorScripts\TaskBehaviorVoice.cs" Line="1" Column="1" />
+      <File FileName="Assets\Thermostat\Scripts\TaskBehaviorWii.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
