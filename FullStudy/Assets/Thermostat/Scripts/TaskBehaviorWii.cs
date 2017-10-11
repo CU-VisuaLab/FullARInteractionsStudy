@@ -220,24 +220,24 @@ namespace Thermostat
         {
             if (WiimoteGazeManager.Instance.HitObject != null)
             {
-                if (WiimoteGazeManager.Instance.HitObject.name == thermostat.name)
-                {
-                    Debug.Log("Select: Selected Thermostat at " + Time.time);
-                    if (!thermostatMoved)
-                    {
-                        temperatureReading.transform.localPosition = new Vector3(0.0f, 0.2f, 0.0f);
-                        thermostat.transform.position = new Vector3(0.0835f, -0.0835f, thermostat.transform.position.z);
-                        moveThermostatArmTo(armRotation);
-                        thermostat.transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
-                        thermostatMoved = true;
-                    }
-                    else
-                    {
-                        calendar.gameObject.SetActive(true);
-                        viewport.gameObject.SetActive(true);
-                        promptViewport.gameObject.SetActive(true);
-                    }
-                }
+				if (WiimoteGazeManager.Instance.HitObject.name == thermostat.name) {
+					Debug.Log ("Select: Selected Thermostat at " + Time.time);
+					if (!thermostatMoved) {
+						temperatureReading.transform.localPosition = new Vector3 (0.0f, 0.2f, 0.0f);
+						thermostat.transform.position = new Vector3 (0.0835f, -0.0835f, thermostat.transform.position.z);
+						moveThermostatArmTo (armRotation);
+						thermostat.transform.eulerAngles = new Vector3 (0.0f, 180.0f, 0.0f);
+						thermostatMoved = true;
+					} else {
+						calendar.gameObject.SetActive (true);
+						viewport.gameObject.SetActive (true);
+						promptViewport.gameObject.SetActive (true);
+					}
+				} 
+				else 
+				{
+					Debug.Log ("Select: Missed Target " WiimoteGazeManager.Instance.HitObject.name + " at " + Time.time);
+				}
             }
         }
         public void StartTask()
